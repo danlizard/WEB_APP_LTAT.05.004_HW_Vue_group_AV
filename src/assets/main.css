@@ -15,6 +15,258 @@ a,
   transition: 0.4s;
 }
 
+.dropbtn {
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  /* position: absolute; */
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  width: 12vw;
+  /* flex-direction: column; */
+  position: absolute;
+  right: 0px;
+  margin-top: 20.5vh;
+
+  /* justify-content: space-between; */
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button)
+.show {display:block;} */
+
+.navigation_bar {
+  /* display: flex; */
+  flex-wrap: nowrap;
+  background-color: darkgreen;
+  height: 14vh;
+  min-height: 72px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.logout {
+  width: 14vh;
+  /* display: none; */
+  background-color: aqua;
+}
+
+.navigation_bar > a > img {
+  border-bottom-left-radius: 40%;
+  border-bottom-right-radius: 40%;
+  /* padding: 0px; */
+  /* padding: clamp(0rem, 0vw, 0rem); */
+  padding: 0vw;
+  /* margin-top: 2.5vh; */
+  width: 12vw;
+  max-width: 200px;
+  min-width: 100px;
+  border-bottom: 0.5vw solid darkgreen;
+  border-left: 0.5vw solid darkgreen;
+  border-right: 0.5vw solid darkgreen;
+  display: block;
+}
+
+.bottom_bar {
+  display: flex;
+  height: 8vh;
+  background-color: darkgreen;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.feed_starter {
+  background-color: lightgreen;
+  height: 14vh;
+  min-height: 72px;
+}
+
+.feed_starter ~ div {
+  display: flex;
+  width: 70vw;
+  margin-top: 4vh;
+  padding: 3vh;
+  border-radius: 3vw;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: whitesmoke;
+}
+
+.feed_container {
+  background-color: lightgreen;
+  min-height: 100vh;
+}
+
+.feed_container img {
+  border-radius: 4vh;
+  max-width: 24vw;
+}
+
+.feed_container .dropdown-content {
+  border-radius: 4vh;
+  max-width: 24vw;
+}
+
+.feed_container p {
+  padding-left: 6vw;
+  font-size: 3vh;
+  margin: 0px;
+}
+
+.feed_container p::first-letter {
+  color: #008c1e;
+  font-size: 5vh;
+}
+
+.feed_container img + p {
+  padding-top: 5vh;
+}
+
+.navigation_bar button {
+  background-color: green;
+  height: 9vh;
+  min-height: 48px;
+  width: 100%;
+  border: none;
+  margin: auto;
+  color: white;
+  text-align: center;
+  font-size: 4vh;
+}
+
+.navigation_bar button:hover {
+  background-color: lightgreen;
+}
+
+
+.submit_button {
+  border-radius: 15%;
+}
+
+
+.login_window {
+  background-color: darkgreen;
+  width: 50vw;
+  margin: auto;
+  border-radius: 5%;
+  position: fixed;
+  top: 25%;
+  left: 25%;
+  bottom: 5%;
+  text-align: center;
+}
+
+#login_button {
+  margin-top: 2vw;
+  background-color: rgb(152, 53, 174);
+  color: rgb(45, 0, 87);
+  padding: 1vh;
+  cursor: pointer;
+  border-width: 1vw;
+  border-color: rgba(121, 10, 225, 0.26);
+
+}
+
+#login_button:hover{
+  background-color: violet;
+  padding: 1vh;
+  cursor: pointer;
+}
+
+#post_button {
+  margin-top: 2vw;
+  background-color: rgb(113, 241, 1);
+  color: rgb(45, 0, 87);
+  padding: 1vh;
+  cursor: pointer;
+  border-width: 1vw;
+  border-color: rgba(121, 10, 225, 0.26);
+
+}
+
+#post_button:hover{
+  background-color: violet;
+  padding: 1vh;
+  cursor: pointer;
+}
+
+.login_window p {
+  color: whitesmoke;
+  font-size: large;
+}
+
+.login_window:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+
+
+
+@media (min-width: 800px) {
+  .navigation_bar {
+    display: flex;
+  }
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .dropdown-content{
+    position: absolute;
+    /* right: 0px; */
+    margin-top: 0px;
+    position: absolute;
+    left: 0px;
+    right: auto;
+  }
+  
+}
+
+/* Applies when the browser's width is 1000px wide or wider: */
+
+@media (min-width: 1000px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .profile_pic {
+    margin-top: 2.5vh;
+  }
+  .dropdown-content{
+    position: absolute;
+    /* right: auto; */
+    right: 0px;
+    left: auto;
+
+    margin-top: 13vw;
+  }
+}
+
 @media (hover: hover) {
   a:hover {
     background-color: hsla(160, 100%, 37%, 0.2);
