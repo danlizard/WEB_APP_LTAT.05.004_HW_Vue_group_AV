@@ -1,13 +1,15 @@
 <script setup>
+import router from '../router';
 </script>
 
 <template>
 <header>
   <div class="navigation_bar">
-    <button>
+    <div style="min-width: 12vw; max-width: 200px"></div>
+    <button @click="goHome">
         Home
     </button>
-    <button>
+    <button @click="goSignUp">
         Signup
     </button>
     <a id="myLink" href="#" style="padding: 0px;">
@@ -22,26 +24,11 @@
 </header>
 </template>
 
-<style scoped>
-h1 {
-  font-weight: 500;
-  font-size: 2.6rem;
-  top: -10px;
-}
-
-h3 {
-  font-size: 1.2rem;
-}
-
-.greetings h1,
-.greetings h3 {
-  text-align: center;
-}
-
-@media (min-width: 1024px) {
-  .greetings h1,
-  .greetings h3 {
-    text-align: left;
-  }
-}
-</style>
+<script>
+export default {
+  methods: {
+    goHome () {router.push('/')},
+    goSignUp () {router.push('/signup')},
+  },
+};
+</script>
