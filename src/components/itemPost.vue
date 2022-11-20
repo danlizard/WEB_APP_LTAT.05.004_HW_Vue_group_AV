@@ -22,7 +22,7 @@
         <!-- <p> -->
         <div class="post_date_container"><p class="post_date"> {{item.date}} </p></div>
         <div class="post_main_container">
-            <span class="post_img"> {{item.img}} </span>
+            <img class="post_img" src="{{item.image}}">
             <p class="post_text"> {{item.text}} </p>
             <p class="post_likes"> {{item.likes}} </p>
         </div>
