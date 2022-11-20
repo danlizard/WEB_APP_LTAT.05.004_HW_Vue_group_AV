@@ -1,13 +1,9 @@
-
-
 <template>
   <main>
   <nav class="feed_container">
 		<div class="feed_starter"></div>
 
     <item-post-comp></item-post-comp>
-
-    <!-- <itemPost text = "HELLO"/> -->
 
 		<div style="height:2vh; background-color:lightgreen" id="postCap"></div>
   </nav>
