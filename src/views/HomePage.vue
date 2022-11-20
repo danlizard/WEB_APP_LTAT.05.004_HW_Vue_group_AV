@@ -5,6 +5,11 @@
 
     <item-post-comp></item-post-comp>
 
+    <button v-on:click="ResetLikes "> Reset likes </button>
+
+
+    <!-- <itemPost text = "HELLO"/> -->
+
 		<div style="height:2vh; background-color:lightgreen" id="postCap"></div>
   </nav>
   </main>
@@ -32,12 +37,13 @@ IncreasePrice: function() {
         }) 
     */
 },
-DecreasePrice: function() {
-
-}
+ResetLikes: function() {
+  this.$store.dispatch("ResetLikesAct")
+},
 
 }
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>

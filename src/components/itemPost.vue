@@ -49,6 +49,9 @@ return this.$store.state.postItemList
 </script>
 
 <style scoped>
+.like_btn{
+    background: url("../public/like.png");
+}
 .item{
 background: rgb(47, 255, 141);
 margin-bottom: 5px;
