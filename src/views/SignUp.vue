@@ -11,7 +11,8 @@
 		<p>or</p>
 		<p>Please log in</p>
 
-		<form action="index.html"
+		<form 
+			action="/"
 			id="app"
 			@submit="checkForm"
 			method="post"
@@ -91,6 +92,7 @@ checkForm: function (e) {
 	}
 
 	if (!this.errors.length) {
+		console.log(this.errors.length)
 	return true;
 	}
 
