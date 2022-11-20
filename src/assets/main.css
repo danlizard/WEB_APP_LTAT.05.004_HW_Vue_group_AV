@@ -185,7 +185,7 @@ p.post_likes {
   width: 50vw;
   margin: auto;
   border-radius: 5%;
-  position: fixed;
+  padding-top: 20vh;
   top: 25%;
   left: 25%;
   bottom: 5%;
