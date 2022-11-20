@@ -29,8 +29,8 @@
         <div class="post_main_container">
             <img class="post_img" v-bind:src="item.image_path" alt="">
             <p class="post_text"> {{item.text}} </p>
-            <button v-on:click="addLike2Item(item)">Like!</button>
         </div>
+        <button v-on:click="addLike2Item(item)" class="like_button">Like!</button>
         <p class="post_likes" :id="'liken_'+item.id"> {{item.likes}} </p>
         <!-- </p> -->
     </div>
@@ -88,9 +88,14 @@ margin-top: 10px;
 padding: 20px;
 background: rgba(255,255,255,0.7);
 }
-.price{
-font-weight: bold;
-color: #E8800C;
+.post_likes{
+    border: 3px whitesmoke solid;
+    background-color: green;
+    padding: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: whitesmoke;
+    border-radius: 1vh;
 }
 </style>
 
