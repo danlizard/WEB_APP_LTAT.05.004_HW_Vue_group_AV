@@ -21,9 +21,9 @@
 			<div>
 				<p v-if="errors.length">
 					<b>Please correct the following error(s):</b>
-					<ul>
-					<li v-for="error in errors" style="color: red">{{ error }}</li>
-					</ul>
+					<!-- <ul> -->
+					<p v-for="error in errors" style="color: red">{{ error }}</p>
+					<!-- </ul> -->
 				</p>
 
 			<!-- <label for="Username"><b>Username</b></label> -->
@@ -64,25 +64,25 @@ checkForm: function (e) {
 	this.errors.push("Password enterering is required.");
 	} 
 
-	if (!this.validPasswordLen(this.email)) {
+	if (!this.validPasswordLen(this.password)) {
 	this.errors.push('Paddword length must be from 8 to 15 chars');
 	}
-	if (!this.validPasswordOneUpper(this.email)) {
+	if (!this.validPasswordOneUpper(this.password)) {
 	this.errors.push('At least one upcase letter');
 	}
 
-	if (!this.validPasswordTwoLower(this.email)) {
+	if (!this.validPasswordTwoLower(this.password)) {
 	this.errors.push('At least two lowercase letters are needed');
 	}
 
-	if (!this.validPasswordOneNumeric(this.email)) {
+	if (!this.validPasswordOneNumeric(this.password)) {
 	this.errors.push('At least one number is required');
 	}
 
-	if (!this.validPasswordStartsWithUpper(this.email)) {
+	if (!this.validPasswordStartsWithUpper(this.password)) {
 	this.errors.push('Capital letter must be the first');
 	}
-	if (!this.validPasswordIncludesUnderscore(this.email)) {
+	if (!this.validPasswordIncludesUnderscore(this.password)) {
 	this.errors.push('_ must be included');
 	}
 
