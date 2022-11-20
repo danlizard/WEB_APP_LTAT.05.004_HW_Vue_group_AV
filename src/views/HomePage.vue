@@ -47,12 +47,13 @@ ResetLikes: function() {
 
 <style scoped>
 .reset_btn {
-  /* position: fixed;
-  left: 50%; */
-  align-self: center;
-  align-items: center;
-  /* margin-left: auto;
-  margin-right: auto; */
-  /* bottom: 2wh;; */
+  position: fixed;
+  bottom: 10vh;
+  left: 50vw;
+  margin: 0;
+  border: 4px lightgreen solid;
+  background-color: whitesmoke;
+  border-radius: 1vw;
+  padding: 0;
 }
 </style>

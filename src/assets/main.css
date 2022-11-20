@@ -123,6 +123,20 @@
   margin: 0px;
 }
 
+.like_button {
+  background-color: lightgreen;
+  height: 2vh;
+  min-height: 48px;
+  width: 10%;
+  float: right;
+  margin: 10px;
+  color: black;
+  text-align: center;
+  font-size: 4vh;
+  border: 4px solid whitesmoke;
+  border-radius: 1vw;
+}
+
 .post_main_container p.post_text::first-letter {
   color: #008c1e;
   font-size: 5vh;
@@ -187,7 +201,6 @@ p.post_likes {
   cursor: pointer;
   border-width: 1vw;
   border-color: rgba(121, 10, 225, 0.26);
-
 }
 
 #login_button:hover{
