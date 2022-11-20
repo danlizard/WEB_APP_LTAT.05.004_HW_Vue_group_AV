@@ -54,6 +54,6 @@ ResetLikes: function() {
   border: 4px lightgreen solid;
   background-color: whitesmoke;
   border-radius: 1vw;
-  padding: 0;
+  padding: 3px;
 }
 </style>

@@ -88,9 +88,14 @@ margin-top: 10px;
 padding: 20px;
 background: rgba(255,255,255,0.7);
 }
-.price{
-font-weight: bold;
-color: #E8800C;
+.post_likes{
+    border: 3px whitesmoke solid;
+    background-color: green;
+    padding: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: whitesmoke;
+    border-radius: 1vh;
 }
 </style>
 
