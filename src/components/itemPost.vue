@@ -8,6 +8,7 @@
         }
     })
 </script> -->
+
 <template>
     <!-- <div>
         <img src="profile2.png" alt="">
@@ -22,7 +23,7 @@
         <!-- <p> -->
         <div class="post_date_container"><p class="post_date"> {{item.date}} </p></div>
         <div class="post_main_container">
-            <img class="post_img" src="{{item.image}}">
+            <img class="post_img" v-bind:src="item.image_path" alt="">
             <p class="post_text"> {{item.text}} </p>
             <p class="post_likes"> {{item.likes}} </p>
         </div>
