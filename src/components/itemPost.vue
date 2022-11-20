@@ -14,7 +14,7 @@
         <p>{{ text }}</p>
     </div> -->
 
-    <div id= "item-list" v-for="item in itemsList" :key="item.id">
+    <div id="item-list" v-for="item in itemsList" :key="item.id">
         
     <!-- <h1> Book list two</h1> -->
     
@@ -24,6 +24,8 @@
         <span class="img"> <b>Img: </b> {{item.img}} </span> <br>
         <span class="text"> <b>Text: </b> {{item.text}} </span><br>
         <span class="text"> <b>Likes: </b> {{item.likes}} </span>
+        <button v-on:click="ResetLikes " class="like_btn"> <img src="../../public/like.png"> </button>
+
         <!-- </p> -->
     </div>
 </template>
@@ -46,6 +48,9 @@ return this.$store.state.postItemList
 </script>
 
 <style scoped>
+.like_btn{
+    background: url("../public/like.png");
+}
 .item{
 background: rgb(47, 255, 141);
 margin-bottom: 5px;
