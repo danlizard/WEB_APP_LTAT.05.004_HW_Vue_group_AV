@@ -9,6 +9,14 @@
     })
 </script> -->
 
+<script setup>
+function addLike2Item(item){
+    console.log(item.id);
+    var target = document.getElementById('liken_'+item.id);
+    target.value = "hohoh";
+}
+</script>
+
 <template>
     <!-- <div>
         <img src="profile2.png" alt="">
@@ -25,8 +33,9 @@
         <div class="post_main_container">
             <img class="post_img" v-bind:src="item.image_path" alt="">
             <p class="post_text"> {{item.text}} </p>
+            <button v-on:click="addLike2Item(item)">Like!</button>
         </div>
-        <p class="post_likes"> {{item.likes}} </p>
+        <p class="post_likes" :id="'liken_'+item.id"> {{item.likes}} </p>
         <!-- </p> -->
     </div>
 </template>
