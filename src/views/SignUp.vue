@@ -12,29 +12,28 @@
 		<p>Please log in</p>
 
 		<form 
-			action="/"
 			id="app"
 			@submit="checkForm"
-			method="post"
+			method="get"	
 			novalidate="true"
 		>
 
 			<div>
 				<p v-if="errors.length">
 					<b>Please correct the following error(s):</b>
-					<!-- <ul> -->
+					<ul>
 					<p v-for="error in errors" style="color: red">{{ error }}</p>
-					<!-- </ul> -->
+					</ul>
 				</p>
 
 			<!-- <label for="Username"><b>Username</b></label> -->
-			<input type="email" id="email" v-model="email" placeholder="Enter email" name="email" Required> <br> <br>
+			<input type="email" id="email" v-model="email" placeholder="Enter email" name="email"> <br> <br>
 		
 			<!-- <label for="psw"><b>Password</b></label> -->
-			<input type="password" id="password" placeholder="Enter password" name="password" Required> <br> <br>
+			<input type="password" id="password" v-model="password" placeholder="Enter password" name="password"> <br> <br>
 		
 			<!-- <label> <input type="checkbox" checked="checked" name="remember"> Remember me <br> <br> </label> -->
-			<button id="login_button" type="submit" value="Submit">Login</button><br> <br>
+			<input id="login_button" type="submit" value="Submit"><br> <br>
 			</div>
 		</form>
 
@@ -52,21 +51,25 @@ name: "Register",
 data: function() {
 	return {
 		errors: [],
-		name: null,
 		email: null,
-		movie: null
+		password: null,
 }
 },
 methods: {
 checkForm: function (e) {
 	this.errors = [];
+	
+	if (!this.password == null || !this.email == null) {
+		e.preventDefault();
+		return(false)
+	}
 
 	if (!this.password) {
 	this.errors.push("Password enterering is required.");
 	} 
 
 	if (!this.validPasswordLen(this.password)) {
-	this.errors.push('Paddword length must be from 8 to 15 chars');
+	this.errors.push('Password length must be from 8 to 15 chars');
 	}
 	if (!this.validPasswordOneUpper(this.password)) {
 	this.errors.push('At least one upcase letter');
@@ -92,11 +95,13 @@ checkForm: function (e) {
 	}
 
 	if (!this.errors.length) {
-		console.log(this.errors.length)
-	return true;
+		return true;
 	}
-
+	console.log(this.errors.length)
+	
 	e.preventDefault();
+
+	
 },
 // validPassword: function (passwd) {
 // 	var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -124,8 +129,9 @@ validPasswordOneUpper: function (passwd) {
 },
 validPasswordLen: function (passwd) {
 	return passwd.length>7 && passwd.length<15;
-},
 }
+}
+
 }
 </script>
 
