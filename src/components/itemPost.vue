@@ -25,8 +25,8 @@
         <div class="post_main_container">
             <img class="post_img" v-bind:src="item.image_path" alt="">
             <p class="post_text"> {{item.text}} </p>
-            <p class="post_likes"> {{item.likes}} </p>
         </div>
+        <p class="post_likes"> {{item.likes}} </p>
         <!-- </p> -->
     </div>
 </template>

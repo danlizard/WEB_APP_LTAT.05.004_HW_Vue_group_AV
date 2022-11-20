@@ -7,7 +7,7 @@ export default createStore({
         postItemList: [
             {id: 1, text: "WHy doesn't it work", image_path: "", date: "1 Dec, 2022", likes: 0},
             {id: 2, text: "tartu cool", image_path: "", date: "12 Dec, 2022", likes: 0},
-            {id: 3, text: "it works WHATT", image_path: "public/dog.png", date: "12 Dec, 2022", likes: 0},
+            {id: 3, text: "it works WHATT", image_path: "dog.png", date: "12 Dec, 2022", likes: 0},
             {id: 4, text: "Tartu keke", image_path: "", date: "15 Dec, 2022", likes: 0},
             {id: 5, text: "Tartu GG", image_path: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=", date: "16 Dec, 2022", likes: 0},
             ]

@@ -94,7 +94,7 @@
   background-color: whitesmoke;
 }
 
-.feed_starter ~ div.post_main_container {
+.post_main_container {
   display: flex;
 }
 
@@ -128,7 +128,7 @@
   font-size: 5vh;
 }
 
-.post_main_container p.post_likes {
+p.post_likes {
   float: right;
   font-size: 2vh;
   margin: 0px;
