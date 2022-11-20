@@ -14,18 +14,18 @@
         <p>{{ text }}</p>
     </div> -->
 
-    <div id="item-list" v-for="item in itemsList" :key="item.id">
+    <div class="post_whole" id= "item-list" v-for="item in itemsList" :key="item.id">
         
     <!-- <h1> Book list two</h1> -->
     
         <!-- <p class="item" v-for="item in itemsList" :key="item.id"> -->
         <!-- <p> -->
-        <span class="date"> <b>Date: </b> {{item.date}} </span><br>
-        <span class="img"> <b>Img: </b> {{item.img}} </span> <br>
-        <span class="text"> <b>Text: </b> {{item.text}} </span><br>
-        <span class="text"> <b>Likes: </b> {{item.likes}} </span>
-        <button v-on:click="ResetLikes " class="like_btn"> <img src="../../public/like.png"> </button>
-
+        <div class="post_date_container"><p class="post_date"> {{item.date}} </p></div>
+        <div class="post_main_container">
+            <img class="post_img" src="{{item.image}}">
+            <p class="post_text"> {{item.text}} </p>
+            <p class="post_likes"> {{item.likes}} </p>
+        </div>
         <!-- </p> -->
     </div>
 </template>

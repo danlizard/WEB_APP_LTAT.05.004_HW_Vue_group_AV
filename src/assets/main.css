@@ -85,7 +85,6 @@
 }
 
 .feed_starter ~ div {
-  display: flex;
   width: 70vw;
   margin-top: 4vh;
   padding: 3vh;
@@ -93,6 +92,10 @@
   margin-left: auto;
   margin-right: auto;
   background-color: whitesmoke;
+}
+
+.feed_starter ~ div.post_main_container {
+  display: flex;
 }
 
 .feed_container {
@@ -114,15 +117,28 @@
   max-width: 24vw;
 }
 
-.feed_container p {
+.post_main_container p.post_text {
   padding-left: 6vw;
   font-size: 3vh;
   margin: 0px;
 }
 
-.feed_container p::first-letter {
+.post_main_container p.post_text::first-letter {
   color: #008c1e;
   font-size: 5vh;
+}
+
+.post_main_container p.post_likes {
+  float: right;
+  font-size: 2vh;
+  margin: 0px;
+}
+
+.feed_container p.post_date {
+  color: #008c1e;
+  float: right;
+  font-size: 2vh;
+  margin: 0px;
 }
 
 .feed_container img + p {

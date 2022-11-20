@@ -1,5 +1,3 @@
-
-
 <template>
   <main>
   <nav class="feed_container">
