@@ -17,7 +17,7 @@
             <img class="post_img" v-bind:src="item.image_path" alt="">
             <p class="post_text"> {{item.text}} </p>
         </div>
-        <button v-on:click="addLike2Item(item)" class="like_button">Like!</button>
+        <img v-on:click="addLike2Item(item)" class="like_button" src="like.png">
         <p class="post_likes" :id="'liken_'+item.id"> {{item.likes}} </p>
 
 </div>

@@ -86,7 +86,7 @@
 
 .feed_starter ~ div {
   width: 70vw;
-  margin-top: 4vh;
+  margin-top: 6vh;
   padding: 3vh;
   border-radius: 3vw;
   margin-left: auto;
@@ -125,9 +125,8 @@
 
 .like_button {
   background-color: lightgreen;
-  height: 2vh;
+  height: 3vh;
   min-height: 48px;
-  width: 10%;
   float: right;
   margin: 10px;
   color: black;
