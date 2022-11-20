@@ -18,12 +18,11 @@
 
 
 <script>
-import ItemPostComp from '../components/itemPostComp.vue';
 import itemPost from '../components/itemPost.vue';
 
 export default {
 name: "Home",
-components: { ItemPostComp, itemPost },
+components: { itemPost },
 data: function() {
 return {}
 },
