@@ -61,15 +61,33 @@ checkForm: function (e) {
 	this.errors = [];
 
 	if (!this.password) {
-	this.errors.push("password required.");
-	} else if (!this.validPassword(this.email)) {
-	this.errors.push('Valid email required.');
+	this.errors.push("Password enterering is required.");
+	} 
+
+	if (!this.validPasswordLen(this.email)) {
+	this.errors.push('Paddword length must be from 8 to 15 chars');
+	}
+	if (!this.validPasswordOneUpper(this.email)) {
+	this.errors.push('At least one upcase letter');
+	}
+
+	if (!this.validPasswordTwoLower(this.email)) {
+	this.errors.push('At least two lowercase letters are needed');
+	}
+
+	if (!this.validPasswordOneNumeric(this.email)) {
+	this.errors.push('At least one number is required');
+	}
+
+	if (!this.validPasswordStartsWithUpper(this.email)) {
+	this.errors.push('Capital letter must be the first');
+	}
+	if (!this.validPasswordIncludesUnderscore(this.email)) {
+	this.errors.push('_ must be included');
 	}
 
 	if (!this.email) {
 	this.errors.push('Email required.');
-	} else if (!this.validEmail(this.email)) {
-	this.errors.push('Valid email required.');
 	}
 
 	if (!this.errors.length) {
@@ -78,14 +96,33 @@ checkForm: function (e) {
 
 	e.preventDefault();
 },
-validEmail: function (email) {
-	var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-	return re.test(email);
+// validPassword: function (passwd) {
+// 	var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+// 	return re.test(passwd);
+// },
+validPasswordIncludesUnderscore: function (passwd) {
+	var re = /_/g;
+	return re.test(passwd);
 },
-validPassword: function (email) {
-	var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-	return re.test(email);
-}
+validPasswordStartsWithUpper: function (passwd) {
+	var re = /^[A-Z]/;
+	return re.test(passwd);
+},
+validPasswordOneNumeric: function (passwd) {
+	var re = /[0-9]/;
+	return re.test(passwd);
+},
+validPasswordTwoLower: function (passwd) {
+	var re = /(?=(.[a-z]){2})/;
+	return re.test(passwd);
+},
+validPasswordOneUpper: function (passwd) {
+	var re = /(?=(.[A-Z]){1})/;
+	return re.test(passwd);
+},
+validPasswordLen: function (passwd) {
+	return passwd.length>7 && passwd.length<15;
+},
 }
 }
 </script>
