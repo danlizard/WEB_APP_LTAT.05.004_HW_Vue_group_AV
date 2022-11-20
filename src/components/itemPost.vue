@@ -1,25 +1,12 @@
-<!-- <script setup>
-    defineProps ({
-        text: {
-            type: String
-        },
-        image_data: {
-            type: Image
-        }
-    })
-</script> -->
-
 <script setup>
-
+    defineProps ({
+        item: {required: true,},
+    })
 </script>
 
 <template>
-    <!-- <div>
-        <img src="profile2.png" alt="">
-        <p>{{ text }}</p>
-    </div> -->
 
-    <div class="post_whole" id= "item-list" v-for="item in itemsList" :key="item.id">
+<div>
         
     <!-- <h1> Book list two</h1> -->
     
@@ -32,17 +19,15 @@
         </div>
         <button v-on:click="addLike2Item(item)" class="like_button">Like!</button>
         <p class="post_likes" :id="'liken_'+item.id"> {{item.likes}} </p>
-        <!-- </p> -->
-    </div>
-</template>
 
+</div>
+
+</template>
 
 <script>
 
-
-
 export default {
-    name: "ItemPostComp",
+    name: "itemPost",
         // props: ["productList"],
     data: function() {
 return {
@@ -54,12 +39,6 @@ return {
     return 0
 },
 }},
-computed: {
-    itemsList(){
-return this.$store.state.postItemList
-},
-
-}
 }
 </script>
 
@@ -98,4 +77,3 @@ background: rgba(255,255,255,0.7);
     border-radius: 1vh;
 }
 </style>
-

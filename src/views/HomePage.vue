@@ -3,8 +3,9 @@
   <nav class="feed_container">
 		<div class="feed_starter"></div>
 
-    <item-post-comp></item-post-comp>
-
+    <div class="post_whole" id="item-list" v-for="item in itemsList" :key="item.id">
+      <itemPost :item=item></itemPost>
+    </div>
 
 
     <!-- <itemPost text = "HELLO"/> -->
@@ -17,15 +18,20 @@
 
 
 <script>
-import ItemPostComp from '../components/itemPost.vue';
+import ItemPostComp from '../components/itemPostComp.vue';
+import itemPost from '../components/itemPost.vue';
 
 export default {
 name: "Home",
-components: { ItemPostComp },
+components: { ItemPostComp, itemPost },
 data: function() {
 return {}
 },
-
+computed: {
+    itemsList(){
+return this.$store.state.postItemList
+},
+},
 methods: {
 IncreasePrice: function() {
     /*
