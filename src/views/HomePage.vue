@@ -5,11 +5,11 @@
 
     <item-post-comp></item-post-comp>
 
-    <button v-on:click="ResetLikes "> Reset likes </button>
 
 
     <!-- <itemPost text = "HELLO"/> -->
 
+    <button class="reset_btn" v-on:click="ResetLikes "> Reset likes </button>
 		<div style="height:2vh; background-color:lightgreen" id="postCap"></div>
   </nav>
   </main>
@@ -46,4 +46,13 @@ ResetLikes: function() {
 </script>
 
 <style scoped>
+.reset_btn {
+  /* position: fixed;
+  left: 50%; */
+  align-self: center;
+  align-items: center;
+  /* margin-left: auto;
+  margin-right: auto; */
+  /* bottom: 2wh;; */
+}
 </style>

@@ -19,11 +19,19 @@ export default createStore({
                 item.likes = 2;
             })
         },
+        AddLikes(state, id) {
+            state.postItemList[state.postItemList.findIndex(p=>p.id == id)].likes += 1
+        },
     },
     actions: {
         ResetLikesAct: act => {
             setTimeout(function() {
                 act.commit("ResetLikes")
+            }, 1000)
+        },
+        AddLikesAct(act, id) {
+            setTimeout(function() {
+                act.commit("AddLikes", id)
             }, 1000)
         },
     }

@@ -10,11 +10,7 @@
 </script> -->
 
 <script setup>
-function addLike2Item(item){
-    console.log(item.id);
-    var target = document.getElementById('liken_'+item.id);
-    target.value = "hohoh";
-}
+
 </script>
 
 <template>
@@ -42,17 +38,27 @@ function addLike2Item(item){
 
 
 <script>
+
+
+
 export default {
     name: "ItemPostComp",
         // props: ["productList"],
     data: function() {
 return {
-
+    addLike2Item(item){
+    console.log(item.id);
+    // var target = document.getElementById('liken_'+item.id);
+    // target.value = "hohoh";
+    this.$store.dispatch('AddLikesAct', item.id)
+    return 0
+},
 }},
 computed: {
     itemsList(){
 return this.$store.state.postItemList
-}
+},
+
 }
 }
 </script>
