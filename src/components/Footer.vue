@@ -4,7 +4,7 @@
 <template>
     <footer>
         <div class="bottom_bar">
-          <p>Ⓒ 2022 University of Tartu. This website is developed for LTAT.05.004 course</p>
+          <p>Ⓒ 2022 University of Tartu. This website was developed for LTAT.05.004 course</p>
         </div>
     </footer>
 </template>
